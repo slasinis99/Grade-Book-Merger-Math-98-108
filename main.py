@@ -1,5 +1,20 @@
 import csv, difflib, re
 
+'''
+    For UWM Math 98/108 Instructors:
+
+    This script will take a Math 98 and a Math 108 Gradebook and merge them into a new gradebook
+    that can be directly uploaded to Canvas. Simply copy the two gradebook csv files into the Gradebooks
+    folder and modify the GB_98 and GB_108 variables to match the names of your csv files. You may
+    then run the script.
+    
+    Once the script has been run, the command console will display all Math 98 assignments that 
+    were copied into the new gradebook. Please ensure to double check that the list of assignments
+    appears correct. 
+    
+    If something doesn't look right, please contact Stephen Lasinis at slasinis@uwm.edu
+'''
+
 GB_98 = 'Gradebooks\\98_09_14_2024.csv'
 GB_108 = 'Gradebooks\\108_09_14_2024.csv'
 
