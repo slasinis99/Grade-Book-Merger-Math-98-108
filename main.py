@@ -8,8 +8,8 @@ import csv, difflib, re
     folder and modify the GB_98 and GB_108 variables to match the names of your csv files. You may
     then run the script.
     
-    Once the script has been run, the command console will display all Math 98 assignments that 
-    were copied into the new gradebook. Please ensure to double check that the list of assignments
+    Once the script has been run, the command console will display all Math 98/108 assignments that 
+    were copied into the new gradebook along with the new grades. Please ensure to double check that the list of assignments
     appears correct. 
     
     If something doesn't look right, please contact Stephen Lasinis at slasinis@uwm.edu
