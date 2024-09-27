@@ -15,8 +15,8 @@ import csv, difflib, re
     If something doesn't look right, please contact Stephen Lasinis at slasinis@uwm.edu
 '''
 
-GB_98 = 'Gradebooks\\98_09_14_2024.csv'
-GB_108 = 'Gradebooks\\108_09_14_2024.csv'
+GB_98 = 'Gradebooks\\98_09_27_2024.csv'
+GB_108 = 'Gradebooks\\108_09_27_2024.csv'
 
 gb_108 = []
 gb_98 = []
@@ -38,6 +38,8 @@ for c in range(len(gb_108[0])):
 #     print(f'{k}: {v}')
 
 for c in range(6, len(gb_98[0])-4):
+    if 'Synch' in gb_98[0][c]:
+        continue
     s: str = gb_98[0][c][0: len(gb_98[0][c])-10]
     bm = difflib.get_close_matches(s, col_map.keys())
     if len(bm) == 0 or s[0] == 'A' or re.sub(r'\D', '', bm[0]) == '108':
@@ -50,5 +52,5 @@ for c in range(6, len(gb_98[0])-4):
             print(f'{gb_new_98[r][0]} => {gb_new_98[r][c]}')
         print()
 
-with open(f'Gradebooks\\new_98_gradebook.csv', 'w', newline='') as f:
-    csv.writer(f).writerows(gb_new_98)
+with open(f'Gradebooks\\new_98_gradebook.csv', 'w', newline='', encoding='utf8') as f:
+    csv.writer(f,delimiter=',').writerows(gb_new_98)
